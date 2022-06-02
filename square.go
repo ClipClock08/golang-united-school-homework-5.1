@@ -1,13 +1,23 @@
 package square
 
+type Point struct {
+	x, y int
+}
 type Square struct {
-	A uint
+	P Point
+	a uint
 }
 
+func (s *Square) endPoint() Point {
+	return Point{
+		x: s.P.x + int(s.a),
+		y: s.P.y + int(s.a),
+	}
+}
 func (s *Square) Area() uint {
-	return s.A * s.A
+	return s.a * s.a
 }
 
 func (s *Square) Perimeter() uint {
-	return 4 * s.A
+	return 4 * s.a
 }
