@@ -1,14 +1,13 @@
-package golang_united_school_homework_5_1
+package square
 
 type Square struct {
-	A int
-	B int
+	A uint
 }
 
-func (s *Square) Area() int {
-	return s.A * s.B
+func (s *Square) Area() uint {
+	return s.A * s.A
 }
 
-func (s *Square) Perimetr() int {
-	return 2 * (s.A + s.B)
+func (s *Square) Perimeter() uint {
+	return 4 * s.A
 }
